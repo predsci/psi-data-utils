@@ -10,7 +10,7 @@ requires = ["setuptools >= 74.0.0"]
 # Project Metadata
 # ----------------
 [project]
-name = "psi-data"
+name = "psi-data-utils"
 version = "0.0.0"
 description = "Sample data fetching and management utilities for Predictive Science Inc."
 authors = [
@@ -55,6 +55,7 @@ classifiers = [
 requires-python = ">=3.8"
 dependencies = [
   "pooch[progress]",
+  "importlib_resources >= 1.3; python_version < '3.9'",
 ]
 
 # Project URLS

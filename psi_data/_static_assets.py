@@ -43,8 +43,12 @@ from types import MappingProxyType
 from typing import Iterable, Optional
 
 import pooch
-from importlib.resources import as_file, files
 from pathlib import Path
+
+try:
+    from importlib.resources import as_file, files
+except ImportError:  # Python < 3.9: fall back to the backport
+    from importlib_resources import as_file, files
 
 __all__ = [
     "fetch_mas_data",
