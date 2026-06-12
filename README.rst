@@ -3,20 +3,20 @@
    :alt: Predictive Science Inc.
    :width: 20px
 
-.. |pypi| image:: https://img.shields.io/pypi/v/psi-data?logo=pypi&logoColor=white
-   :target: https://pypi.org/project/psi-data
+.. |pypi| image:: https://img.shields.io/pypi/v/psi-data-utils?logo=pypi&logoColor=white
+   :target: https://pypi.org/project/psi-data-utils
    :alt: PyPI
 
-.. |license| image:: https://img.shields.io/pypi/l/psi-data?logo=apache&logoColor=white
+.. |license| image:: https://img.shields.io/pypi/l/psi-data-utils?logo=apache&logoColor=white
    :target: https://opensource.org/license/apache-2-0/
    :alt: License
 
-.. |pyversions| image:: https://img.shields.io/pypi/pyversions/psi-data.svg?logo=python&label=python&logoColor=white
-   :target: https://pypi.org/project/psi-data
+.. |pyversions| image:: https://img.shields.io/pypi/pyversions/psi-data-utils.svg?logo=python&label=python&logoColor=white
+   :target: https://pypi.org/project/psi-data-utils
    :alt: Python Versions
 
-.. |deps| image:: https://img.shields.io/librariesio/github/predsci/psi-data?logo=Libraries.io&logoColor=white
-   :target: https://github.com/predsci/psi-data/blob/main/pyproject.toml
+.. |deps| image:: https://img.shields.io/librariesio/github/predsci/psi-data-utils?logo=Libraries.io&logoColor=white
+   :target: https://github.com/predsci/psi-data-utils/blob/main/pyproject.toml
    :alt: Libraries.io
 
 .. |publish| image:: https://github.com/predsci/psi-data/actions/workflows/publish.yml/badge.svg?
@@ -53,5 +53,5 @@ or `contact <https://www.predsci.com/portal/contact.php>`_ Predictive Science In
 `Predictive Science Inc. <https://predsci.com>`_ |
 `Repository <https://github.com/predsci/psi-data>`_ |
 `Documentation <https://predsci.com/doc/psi-data>`_ |
-`Distribution <https://pypi.org/project/psi-data>`_
+`Distribution <https://pypi.org/project/psi-data-utils>`_
 
