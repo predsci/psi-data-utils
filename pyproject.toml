@@ -11,7 +11,7 @@ requires = ["setuptools >= 74.0.0"]
 # ----------------
 [project]
 name = "psi-data-utils"
-version = "0.0.0"
+version = "0.0.1"
 description = "Sample data fetching and management utilities for Predictive Science Inc."
 authors = [
   {name = "Predictive Science Inc.", email = "webmaster@predsci.com"},
