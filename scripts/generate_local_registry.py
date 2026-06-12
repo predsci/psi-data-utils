@@ -37,7 +37,7 @@ def parse_args(argv: Optional[list[str]] = None) -> argparse.Namespace:
         type=Path,
         nargs="?",
         default=os.environ.get("PSI_DATA_DEV_DIR"),
-        help="Directory of asset files to hash. Defaults to the $DEV_DIR environment variable.",
+        help="Directory of asset files to hash. Defaults to the $PSI_DATA_DEV_DIR environment variable.",
     )
     parser.add_argument(
         "-o", "--output",
@@ -47,7 +47,7 @@ def parse_args(argv: Optional[list[str]] = None) -> argparse.Namespace:
     )
     args = parser.parse_args(argv)
     if args.assets_dir is None:
-        parser.error("no assets directory given and $DEV_DIR is not set")
+        parser.error("no assets directory given and $PSI_DATA_DEV_DIR is not set")
     return args
 
 
