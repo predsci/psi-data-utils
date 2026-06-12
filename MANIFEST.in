@@ -1,0 +1,3 @@
+# Keep the development registry (a regenerated build artifact) out of the sdist.
+# The wheel already excludes it via include-package-data = false in pyproject.toml.
+exclude psi_data/registry/registry-dev.txt

@@ -87,7 +87,6 @@ docs = [
   "sphinx-copybutton==0.5.2",
   "numpydoc==1.9.0",
   "pthree==1.0.1",
-  "psi-io[hdf4]"
 ]
 dev = [
   "nox>=2025.11.12",
@@ -115,9 +114,10 @@ exclude = [
 
 [tool.setuptools]
 license-files = ["LICENSE*"]
+include-package-data = false
 
 [tool.setuptools.package-data]
-psi_data = ["registry/*.txt"]
+psi_data = ["registry/registry.txt"]
 
 # Testing (pytest) configuration
 # ------------------------------
