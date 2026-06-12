@@ -40,9 +40,7 @@
 **psi-data** is a Python package developed by `Predictive Science Inc. <https://www.predsci.com>`_ for
 fetching sample PSI datasets *viz.* for use in documentation and tutorial build pipelines. This package
 is intended to be a lightweight utility for downloading and caching PSI data products, and it is not meant
-to be a general-purpose data access library. For reading PSI MAS and POT3D model output with physical units,
-lazy loading, and mesh-aware slicing, see :mod:`~psi_io.mhd_io.PsiData` and the
-:ref:`psi-io overview` for an inventory of all supported quantities and coordinate scales.
+to be a general-purpose data access library.
 
 To get started with **psi-data**, visit the
 `User Guide <https://predsci.com/doc/psi-data/guide/>`_ for installation instructions,

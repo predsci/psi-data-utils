@@ -3,11 +3,17 @@
 from __future__ import annotations
 
 import os
+from pathlib import Path
 
-# psi_data loads its registry at import time. Only the development registry
-# (registry-dev.txt) is checked into the source tree, so enable DEVELOPMENT
-# mode before psi_data is imported anywhere in the test session.
-os.environ.setdefault("DEVELOPMENT", "1")
+# psi_data loads its registry at import time, choosing registry.txt normally or
+# registry-dev.txt under DEVELOPMENT. Select the mode that matches whichever
+# registry file is actually checked in, so the suite imports cleanly either way.
+_REGISTRY_DIR = Path(__file__).resolve().parents[1] / "psi_data" / "registry"
+if (
+    not (_REGISTRY_DIR / "registry.txt").is_file()
+    and (_REGISTRY_DIR / "registry-dev.txt").is_file()
+):
+    os.environ.setdefault("DEVELOPMENT", "1")
 
 import pytest
 
