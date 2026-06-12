@@ -1,0 +1,41 @@
+channels:
+  - conda-forge
+dependencies:
+  # -------- Core Python --------
+  - python=3.13
+
+  # -------- Build toolchain --------
+  - setuptools
+  - python-build
+
+  # -------- Python Runtime --------
+  - pooch
+  - tqdm
+
+  # -------- Testing / QA --------
+  - pytest
+  - pytest-cov
+  - pytest-benchmark
+  - mypy
+  - ruff
+  - coverage
+  - nox
+
+  # -------- Docs --------
+  - sphinx
+  - sphinx-book-theme
+  - sphinx-copybutton
+  - numpydoc
+
+  # -------- Scripts --------
+  - packaging
+
+  # -------- Publish --------
+  - twine
+
+  # -------- Pip installs --------
+  - pip
+  - pip:
+      - pthree    # Documentation building
+      - psi-io[hdf4]
+
