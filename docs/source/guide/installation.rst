@@ -38,15 +38,3 @@ once the data are on disk:
   through MAS and POT3D vector fields.
 - `pyvisual <https://predsci.com/doc/pyvisual/>`_ (PyPI: ``psi-pyvisual``) —
   interactive 3-D visualization of spherical MHD model output.
-
-Development Installation
-------------------------
-To work on ``psi-data`` itself, clone the repository and perform an editable
-install. The optional dependency groups declared in ``pyproject.toml`` pull in
-the tooling for tests, type-checking, linting, and documentation:
-
-.. code-block:: bash
-
-    git clone https://github.com/predsci/psi-data.git
-    cd psi-data
-    pip install -e ".[all]"

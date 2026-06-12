@@ -100,7 +100,7 @@ viewcode_line_numbers = True
 extensions.append("sphinx.ext.autosummary")
 
 root_package = 'psi_data'
-exclude_private = False
+exclude_private = True
 exclude_tests = True
 exclude_dunder = True
 sort_members = False
@@ -144,8 +144,10 @@ numpydoc_xref_aliases = {
     "Path": "pathlib.Path",
     "Callable": "collections.abc.Callable",
     "Sequence": "collections.abc.Sequence",
+    "Iterable": "collections.abc.Iterable",
     "Any": "typing.Any",
     "Literal": "typing.Literal",
+    "Filepaths": "collections.namedtuple"
 }
 
 # ------------------------------------------------------------------------------

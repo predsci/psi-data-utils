@@ -5,42 +5,27 @@ MHD model output from MAS and POT3D runs plus standalone example files. Files
 are downloaded on demand into a local :mod:`pooch` cache and verified against
 packaged checksums, so repeated calls are cheap.
 
-All public objects are re-exported from :mod:`psi_data._static_assets`:
-
-- :func:`~psi_data._static_assets.fetch_mas_data` — MAS coronal/heliospheric
-  MHD fields.
-- :func:`~psi_data._static_assets.fetch_mas_quantities` — MAS quantities at the
-  inner radial boundary.
-- :func:`~psi_data._static_assets.fetch_pot3d_data` — POT3D PFSS magnetic field
-  components.
-- :func:`~psi_data._static_assets.fetch_example_fieldline`,
-  :func:`~psi_data._static_assets.fetch_example_radial_scale`,
-  :func:`~psi_data._static_assets.fetch_example_chmapdb` — standalone example
-  data files.
-- :func:`~psi_data._static_assets.fetch_all` — download the entire registry for
-  one HDF version.
-- :func:`~psi_data._static_assets.clear_psi_cache` — remove the local download
-  cache.
-- :class:`~psi_data._static_assets.RegistryWarning` — warning for unavailable
-  registry files.
-
 Examples
 --------
 >>> import psi_data
 >>> paths = psi_data.fetch_mas_data(domains="cor", variables="br")  # doctest: +SKIP
 >>> paths.cor_br  # doctest: +SKIP
 PosixPath('.../cor/mhd/br002.h5')
-
-Attributes
-----------
-__version__ : str
-    Installed package version, resolved from package metadata or, in an
-    editable checkout without metadata, from ``pyproject.toml``.
 """
 
 from ._static_assets import *
 
 __all__ = [*_static_assets.__all__,]
+
+# Hoist the canonical location of the public API from the private implementation
+# module up to the package root. This makes documentation tooling (and runtime
+# introspection) present these objects as ``psi_data.<name>`` rather than
+# ``psi_data._static_assets.<name>``.
+for _name in __all__:
+    _obj = globals().get(_name)
+    if getattr(_obj, "__module__", None) == _static_assets.__name__:
+        _obj.__module__ = __name__
+del _name, _obj
 
 try:
     from importlib.metadata import version as _pkg_version

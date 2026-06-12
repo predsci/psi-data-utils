@@ -17,7 +17,6 @@ if (
 
 import pytest
 
-import psi_data
 from psi_data import _static_assets
 
 

@@ -4,7 +4,7 @@ Overview
 ========
 
 ``psi-data`` centers on a single module-level `pooch <https://www.fatiando.org/pooch/>`_
-fetcher (:data:`~psi_data._static_assets.FETCHER`) and a family of ``fetch_*``
+fetcher (the module-level ``FETCHER``) and a family of ``fetch_*``
 helper functions. Each helper resolves the registry keys for the requested data,
 downloads any files that are not already cached, verifies them against the
 checksums recorded in the packaged registry, and returns their on-disk paths.
@@ -50,16 +50,16 @@ model quantities in detail.
    * - Fetcher
      - Domain key(s)
      - Available variables
-   * - :func:`~psi_data._static_assets.fetch_mas_data`
+   * - :func:`~psi_data.fetch_mas_data`
      - ``cor``, ``hel``
      - ``br``, ``bt``, ``bp`` (:math:`\mathbf{B}`); ``vr``, ``vt``, ``vp``
        (:math:`\mathbf{v}`); ``jr``, ``jt``, ``jp`` (:math:`\mathbf{J}`); ``t``,
        ``rho``, ``p``; and, for the coronal domain only, the wave/heating
        quantities ``ep``, ``em``, ``zp``, ``zm``, ``heat``
-   * - :func:`~psi_data._static_assets.fetch_pot3d_data`
+   * - :func:`~psi_data.fetch_pot3d_data`
      - ``pot3d``
      - ``br``, ``bt``, ``bp`` (:math:`\mathbf{B}`)
-   * - :func:`~psi_data._static_assets.fetch_mas_quantities`
+   * - :func:`~psi_data.fetch_mas_quantities`
      - ``quantities``
      - ``ch_pm``
 
@@ -71,11 +71,11 @@ only the variables common to *all* requested domains are fetched.
 In addition to the model fields, three standalone example files are provided for
 use in tutorials and tests:
 
-- :func:`~psi_data._static_assets.fetch_example_fieldline` — an example magnetic
+- :func:`~psi_data.fetch_example_fieldline` — an example magnetic
   field line trace.
-- :func:`~psi_data._static_assets.fetch_example_radial_scale` — an example
+- :func:`~psi_data.fetch_example_radial_scale` — an example
   radial scaling profile.
-- :func:`~psi_data._static_assets.fetch_example_chmapdb` — an example
+- :func:`~psi_data.fetch_example_chmapdb` — an example
   coronal-hole map database (HDF5 only).
 
 Quick Start
@@ -114,9 +114,9 @@ The single-file example helpers return a lone :class:`~pathlib.Path`:
 
 .. note::
 
-   :func:`~psi_data._static_assets.fetch_example_chmapdb` is only available in
+   :func:`~psi_data.fetch_example_chmapdb` is only available in
    HDF5. Requesting it with ``hdf=4`` emits a
-   :class:`~psi_data._static_assets.RegistryWarning` and returns ``None`` rather
+   :class:`~psi_data.RegistryWarning` and returns ``None`` rather
    than raising.
 
 Selecting the HDF format
@@ -154,7 +154,7 @@ resolved by :func:`pooch.os_cache` under the ``psi`` project name (for example,
 
 To populate the cache up front — for example, before working offline — fetch the
 entire registry for a given format with
-:func:`~psi_data._static_assets.fetch_all`:
+:func:`~psi_data.fetch_all`:
 
 .. code-block:: python
 
@@ -164,12 +164,12 @@ entire registry for a given format with
 
 .. warning::
 
-   :func:`~psi_data._static_assets.fetch_all` downloads the complete data
+   :func:`~psi_data.fetch_all` downloads the complete data
    collection for the chosen format and may transfer a large volume of data on
    its first invocation.
 
 To reclaim disk space, clear the cache with
-:func:`~psi_data._static_assets.clear_psi_cache`. By default it performs a
+:func:`~psi_data.clear_psi_cache`. By default it performs a
 *dry run* (reporting what would be removed) and prompts for confirmation before
 deleting; both the default OS cache and the :envvar:`PSI_DATA_CACHE` override are
 considered:

@@ -37,7 +37,7 @@ import shutil
 import warnings
 from collections import namedtuple
 from collections.abc import Callable
-from functools import partial
+from functools import partial, wraps
 from itertools import product
 from types import MappingProxyType
 from typing import Iterable, Optional
@@ -141,6 +141,7 @@ def _check_hdf_version(func) -> Callable:
         The wrapped fetcher, which raises :exc:`ValueError` for unsupported
         HDF versions before delegating to *func*.
     """
+    @wraps(func)
     def wrapper(*args, hdf: int = 5, **kwargs):
         """Validate *hdf* against :data:`HDF_EXT`, then call the wrapped fetcher."""
         if hdf not in HDF_EXT:
