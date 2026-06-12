@@ -9,11 +9,11 @@ Installation
     projects. For the best results, we recommend using ``conda`` – *via* Miniforge (preferred), Miniconda, or Anaconda
     – to create and manage your virtual environments.
 
-To get started with **psi-data**, you can install it directly from PyPI:
+To get started with **psi-data-utils**, you can install it directly from PyPI:
 
 .. code-block:: bash
 
-    pip install psi-data
+    pip install psi-data-utils
 
 This installs the package along with its only hard runtime dependency,
 `pooch <https://www.fatiando.org/pooch/>`_, which manages downloading and caching
@@ -27,9 +27,9 @@ Required Dependencies
 
 Companion Packages
 ------------------
-``psi-data`` only *retrieves* data files; reading, analyzing, and visualizing
+``psi-data-utils`` only *retrieves* data files; reading, analyzing, and visualizing
 them is handled by the rest of the PSI Python ecosystem. The following packages
-are not required to install or use ``psi-data``, but are the natural next steps
+are not required to install or use ``psi-data-utils``, but are the natural next steps
 once the data are on disk:
 
 - `psi-io <https://predsci.com/doc/psi-io/>`_ — read and write PSI HDF4/HDF5

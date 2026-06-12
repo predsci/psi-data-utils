@@ -3,7 +3,7 @@
 Contributing & Development
 ==========================
 
-This page describes how to develop ``psi-data`` and, in particular, how to
+This page describes how to develop ``psi-data-utils`` and, in particular, how to
 maintain the **data registry** — the manifest of downloadable files and their
 checksums that drives every ``fetch_*`` helper. Because the package ships only
 the registry (not the data), adding or updating a dataset is a coordinated,
@@ -24,8 +24,8 @@ We recommend an isolated environment (``conda`` via Miniforge preferred):
 
 .. code-block:: bash
 
-   git clone https://github.com/predsci/psi-data.git
-   cd psi-data
+   git clone https://github.com/predsci/psi-data-utils.git
+   cd psi-data-utils
    pip install -e ".[all]"   # editable install + test/lint/docs/dev tooling
 
 The editable install puts ``psi_data`` on the path so the scripts and tests work

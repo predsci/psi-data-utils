@@ -25,7 +25,7 @@ except ImportError:
 # ------------------------------------------------------------------------------
 # Project Information
 # ------------------------------------------------------------------------------
-project = "psi-data"
+project = "psi-data-utils"
 author = "Predictive Science Inc"
 copyright = f"{datetime.now():%Y}, {author}"
 version = psi_data.__version__
@@ -61,13 +61,13 @@ html_theme_options = {
         },
         {
             'name': 'Repository',
-            'url': 'https://github.com/predsci/psi-data',
+            'url': 'https://github.com/predsci/psi-data-utils',
             "icon": "fa-brands fa-github fa-fw",
             "type": "fontawesome",
         },
         {
             'name': 'Documentation',
-            'url': 'https://predsci.com/doc/psi-data',
+            'url': 'https://predsci.com/doc/psi-data-utils',
             "icon": "fa fa-file fa-fw",
             "type": "fontawesome",
         },

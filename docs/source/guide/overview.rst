@@ -3,7 +3,7 @@
 Overview
 ========
 
-``psi-data`` centers on a single module-level `pooch <https://www.fatiando.org/pooch/>`_
+``psi-data-utils`` centers on a single module-level `pooch <https://www.fatiando.org/pooch/>`_
 fetcher (the module-level ``FETCHER``) and a family of ``fetch_*``
 helper functions. Each helper resolves the registry keys for the requested data,
 downloads any files that are not already cached, verifies them against the
@@ -11,7 +11,7 @@ checksums recorded in the packaged registry, and returns their on-disk paths.
 
 Because every download is checksum-verified and cached, calling a ``fetch_*``
 function a second time is effectively free: the cached file is reused without
-re-downloading. This makes ``psi-data`` well suited to documentation examples,
+re-downloading. This makes ``psi-data-utils`` well suited to documentation examples,
 tutorials, and test fixtures that need real PSI model output without bundling
 large binary files.
 
@@ -137,7 +137,7 @@ unsupported value raises :exc:`ValueError`.
 
    The HDF format is also inferred from the file extension by downstream PSI
    tools such as ``psi-io`` (``.hdf`` for HDF4, ``.h5`` for HDF5), so the files
-   returned by ``psi-data`` can be passed straight through without specifying
+   returned by ``psi-data-utils`` can be passed straight through without specifying
    the format again.
 
 Caching and offline use
@@ -195,7 +195,7 @@ the asset tree, and is not required for normal use.
 Related Packages
 ================
 
-``psi-data`` is the entry point for obtaining sample data; the companion PSI
+``psi-data-utils`` is the entry point for obtaining sample data; the companion PSI
 packages consume the paths it returns. A typical workflow downloads a field,
 reads it with `psi-io <https://predsci.com/doc/psi-io/>`_, and proceeds to
 tracing or visualization.

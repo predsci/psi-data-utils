@@ -62,8 +62,8 @@ dependencies = [
 # ------------
 [project.urls]
 homepage = "https://predsci.com/"
-documentation = "https://predsci.com/doc/psi-data"
-repository = "https://github.com/predsci/psi-data"
+documentation = "https://predsci.com/doc/psi-data-utils"
+repository = "https://github.com/predsci/psi-data-utils"
 
 # Project Dependencies
 # --------------------
@@ -93,7 +93,7 @@ dev = [
   "nox>=2025.11.12",
 ]
 all = [
-  "psi-data[build,test,types,lint,docs,dev]",
+  "psi-data-utils[build,test,types,lint,docs,dev]",
 ]
 
 # Tools & Extensions

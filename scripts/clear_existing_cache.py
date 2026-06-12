@@ -1,4 +1,4 @@
-"""Clear the psi-data pooch cache: the default OS cache and any env-var override."""
+"""Clear the psi-data-utils pooch cache: the default OS cache and any env-var override."""
 
 from __future__ import annotations
 
@@ -15,7 +15,7 @@ CACHE_ENV = "PSI_DATA_CACHE"
 
 
 def cache_locations() -> list[Path]:
-    """Return the distinct cache directories psi-data may use, in clear order."""
+    """Return the distinct cache directories psi-data-utils may use, in clear order."""
     locations = [Path(pooch.os_cache(CACHE_DIR)).expanduser()]
     env_value = os.environ.get(CACHE_ENV)
     if env_value:

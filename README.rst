@@ -19,12 +19,12 @@
    :target: https://github.com/predsci/psi-data-utils/blob/main/pyproject.toml
    :alt: Libraries.io
 
-.. |publish| image:: https://github.com/predsci/psi-data/actions/workflows/publish.yml/badge.svg?
-   :target: https://github.com/predsci/psi-data/actions/workflows/publish.yml
+.. |publish| image:: https://github.com/predsci/psi-data-utils/actions/workflows/publish.yml/badge.svg?
+   :target: https://github.com/predsci/psi-data-utils/actions/workflows/publish.yml
    :alt: Publish workflow
 
-.. |docs| image:: https://github.com/predsci/psi-data/actions/workflows/docs.yml/badge.svg?
-   :target: https://predsci.com/doc/psi-data
+.. |docs| image:: https://github.com/predsci/psi-data-utils/actions/workflows/docs.yml/badge.svg?
+   :target: https://predsci.com/doc/psi-data-utils
    :alt: Docs workflow
 
 |pypi|
@@ -34,24 +34,24 @@
 |publish|
 |docs|
 
-|psi| **psi-data** | *PSI's Sample Data Utilities*
+|psi| **psi-data-utils** | *PSI's Sample Data Utilities*
 --------------------------------------------------------------------
 
-**psi-data** is a Python package developed by `Predictive Science Inc. <https://www.predsci.com>`_ for
+**psi-data-utils** is a Python package developed by `Predictive Science Inc. <https://www.predsci.com>`_ for
 fetching sample PSI datasets *viz.* for use in documentation and tutorial build pipelines. This package
 is intended to be a lightweight utility for downloading and caching PSI data products, and it is not meant
 to be a general-purpose data access library.
 
-To get started with **psi-data**, visit the
-`User Guide <https://predsci.com/doc/psi-data/guide/>`_ for installation instructions,
+To get started with **psi-data-utils**, visit the
+`User Guide <https://predsci.com/doc/psi-data-utils/guide/>`_ for installation instructions,
 an overview of features, and development/contribution guidelines. Please direct any questions or
-issues to the `issue tracker <https://github.com/predsci/psi-data/issues>`_,
+issues to the `issue tracker <https://github.com/predsci/psi-data-utils/issues>`_,
 or `contact <https://www.predsci.com/portal/contact.php>`_ Predictive Science Inc. directly.
 
 ----
 
 `Predictive Science Inc. <https://predsci.com>`_ |
-`Repository <https://github.com/predsci/psi-data>`_ |
-`Documentation <https://predsci.com/doc/psi-data>`_ |
+`Repository <https://github.com/predsci/psi-data-utils>`_ |
+`Documentation <https://predsci.com/doc/psi-data-utils>`_ |
 `Distribution <https://pypi.org/project/psi-data-utils>`_
 
